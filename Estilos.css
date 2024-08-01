@@ -241,54 +241,54 @@ background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30
 }
 
 .container {
-    margin-top: 5rem; /* Espacio superior */
-    text-align: center; /* Centra el texto */
-    padding: 0 15px; /* Añade padding lateral para móviles */
+    margin-top: 5rem; 
+    text-align: center; 
+    padding: 0 15px; 
 }
 
 /* Estilo para los encabezados */
 .container h1 {
-    font-size: 2.5rem; /* Tamaño del texto del encabezado */
-    margin-bottom: 1rem; /* Espacio debajo del encabezado */
-    color: #ff6f61; /* Color del texto */
+    font-size: 2.5rem; 
+    margin-bottom: 1rem; 
+    color: #ff6f61; 
     margin-bottom: 70px;
 }
 
-/* Estilo para los párrafos */
+
 .container p {
-    font-size: 1.125rem; /* Tamaño del texto del párrafo */
-    margin-bottom: 1.5rem; /* Espacio debajo de los párrafos */
-    color: #555; /* Color del texto */
+    font-size: 1.125rem;
+    margin-bottom: 1.5rem; 
+    color: #555;
     margin-bottom: 70px;
 }
 
 
-/* Estilo específico para la imagen en la sección de inicio */
+
 .inicio-img {
-    max-width: 100%; /* Asegura que la imagen no se desborde del contenedor */
-    height: auto; /* Mantiene la proporción de la imagen */
-    width: 50%; /* Ajusta el tamaño de la imagen según tus preferencias */
-    margin: 20px auto; /* Centra la imagen horizontalmente y añade un margen vertical */
-    margin-bottom: 70px; /* Espacio debajo de la imagen */
-    border-radius: 10px; /* Bordes redondeados */
+    max-width: 100%; 
+    height: auto; 
+    width: 50%; 
+    margin: 20px auto; 
+    margin-bottom: 70px; 
+    border-radius: 10px; 
 }
 
 @media (max-width: 767.98px) {
     .container {
-        padding: 0 15px; /* Añade padding lateral en móviles */
+        padding: 0 15px; 
     }
 
     .container h1 {
-        font-size: 2rem; /* Ajusta el tamaño del texto en pantallas pequeñas */
+        font-size: 2rem; 
     }
 
     .container p {
-        font-size: 1rem; /* Ajusta el tamaño del texto en pantallas pequeñas */
-        margin-bottom: 1rem; /* Reduce el espacio entre párrafos en pantallas pequeñas */
+        font-size: 1rem; 
+        margin-bottom: 1rem; 
     }
 
     .inicio-img {
-        width: 80%; /* Ajusta el tamaño de la imagen en móviles */
+        width: 80%; 
     }
 }
 
@@ -302,17 +302,17 @@ background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30
 
 .main-container {
     display: flex;
-    justify-content: center; /* Centra los contenedores dentro del main-container */
-    margin: 40px 0; /* Añade espacio vertical alrededor del main-container */
-    padding: 20px; /* Añade espacio alrededor del contenido */
-    border: 1px solid #ddd; /* Añade un borde alrededor del main-container */
-    border-radius: 10px; /* Bordes redondeados para el main-container */
-    background-color: #f9f9f9; /* Fondo ligero para el main-container */
+    justify-content: center; 
+    margin: 40px 0; 
+    padding: 20px; 
+    border: 1px solid #ddd; 
+    border-radius: 10px;
+    background-color: #f9f9f9; 
 }
 
 .left-container, .right-container {
-    max-width: 45%; /* Limita el ancho de cada contenedor al 45% del main-container */
-    margin: 0 20px; /* Añade espacio entre los contenedores */
+    max-width: 45%; 
+    margin: 0 20px; 
 }
 
 .left-container {
@@ -336,9 +336,9 @@ background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30
 
 .right-container {
     display: flex;
-    justify-content: center; /* Centra el contenido horizontalmente */
+    justify-content: center; 
     align-items: center;
-    gap: 20px; /* Añade espacio entre las imágenes */
+    gap: 20px; 
 }
 
 .right-container img {
@@ -347,13 +347,13 @@ background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30
     border-radius: 10px;
 }
 
-/* Estilos para los párrafos generales */
+
 .container p {
     font-size: 18px;
     line-height: 1.6;
 }
 
-/* Estilos para el botón */
+
 .custom-button {
     background-color: #ff6f61;
     color: white;
@@ -365,49 +365,49 @@ background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30
 }
 
 .custom-button:hover {
-    background-color: #b25a04; /* Color de fondo al pasar el mouse */
+    background-color: #b25a04; 
 }
 
 /* Ajustes para pantallas pequeñas */
 @media (max-width: 768px) {
     .main-container {
-        flex-direction: column; /* Apila los contenedores verticalmente en pantallas pequeñas */
-        align-items: center; /* Centra los contenedores verticalmente */
+        flex-direction: column; 
+        align-items: center; 
     }
 
     .left-container, .right-container {
-        max-width: 100%; /* Asegura que los contenedores ocupen el 100% del ancho disponible */
-        margin: 10px 0; /* Espacio entre los contenedores en pantallas pequeñas */
+        max-width: 100%; 
+        margin: 10px 0;
     }
 
     .right-container {
-        flex-direction: column; /* Apila las imágenes verticalmente en pantallas pequeñas */
+        flex-direction: column; 
     }
 
     .right-container img {
-        max-width: 90%; /* Aumenta el ancho de las imágenes en pantallas pequeñas */
-        margin-bottom: 10px; /* Añade espacio entre las imágenes */
+        max-width: 90%; 
+        margin-bottom: 10px; 
     }
 
     .custom-heading {
-        font-size: 24px; /* Ajusta el tamaño del título para pantallas pequeñas */
+        font-size: 24px; 
     }
 
     .custom-span {
-        font-size: 16px; /* Ajusta el tamaño del texto para pantallas pequeñas */
+        font-size: 16px; 
     }
 
     .custom-button {
-        font-size: 18px; /* Ajusta el tamaño del botón para pantallas pequeñas */
+        font-size: 18px; 
     }
 }
 .promo-section {
     text-align: center;
     padding: 60px 20px;
-    background-color: #ffffff; /* Fondo ligero */
-    border: 2px solid #ffffff; /* Borde */
-    border-radius: 15px; /* Bordes redondeados */
-    margin: 50px 0; /* Espacio superior e inferior */
+    background-color: #ffffff; 
+    border: 2px solid #ffffff; 
+    border-radius: 15px; 
+    margin: 50px 0; 
 }
 
 .promo-heading {
@@ -433,7 +433,7 @@ background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30
     
         font-size: 16px;
         color: #555;
-        /* Aumenta el margen superior aquí para crear espacio entre el texto y la imagen */
+        
         margin-top: 10px;
     
 }
@@ -441,14 +441,13 @@ background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30
 .promo-item {
     text-align: center;
     max-width: 400px;
-    /* Opcional: puedes agregar un relleno o margen para ajustar el espaciado dentro del contenedor */
-    padding: 10px; /* Añade relleno interno si es necesario */
+    padding: 10px; 
 }
 .promo-image {
-    max-width: 100%; /* Ancho máximo del 100% del contenedor */
+    max-width: 100%; 
     height: auto;
     border-radius: 10px;
-    margin-bottom: 20px; /* Aumenta el margen inferior aquí */
+    margin-bottom: 20px; 
 }
 
 
@@ -461,7 +460,7 @@ background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30
 .promo-text {
     font-size: 20px;
     color: #555;
-    margin-bottom: 50px; /* Aumenta el margen inferior aquí */
+    margin-bottom: 50px; 
 }
 .promo-button {
     background-color: #ff6f61;
@@ -479,7 +478,7 @@ background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30
 }
 
 
-/* Ajustes para pantallas pequeñas */
+
 @media (max-width: 768px) {
     .promo-section {
         padding: 40px 10px;
@@ -504,7 +503,7 @@ background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30
 
     .promo-button {
         font-size: 20px;
-        margin-top: 30px; /* Ajusta el margen superior para pantallas pequeñas */
+        margin-top: 30px; 
     }
 }
 
@@ -512,21 +511,21 @@ background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30
 .contact-promo-section {
     text-align: center;
     padding: 60px 20px;
-    background-color: #fff3e0; /* Fondo ligero */
-    border: 2px solid #ff6f61; /* Borde colorido */
-    border-radius: 15px; /* Bordes redondeados */
-    margin: 50px 0; /* Espacio superior e inferior */
+    background-color: #fff3e0; 
+    border: 2px solid #ff6f61; 
+    border-radius: 15px; 
+    margin: 50px 0; 
 }
 
 .contact-promo-heading {
     font-size: 36px;
-    color: #ff6f61; /* Color llamativo */
+    color: #ff6f61; 
     margin-bottom: 20px;
 }
 
 .contact-promo-text {
     font-size: 20px;
-    color: #ff3d00; /* Color de texto */
+    color: #ff3d00; 
     margin-bottom: 30px;
 }
 
@@ -545,7 +544,7 @@ background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30
     transform: scale(1.05);
 }
 
-/* Ajustes para pantallas pequeñas */
+
 @media (max-width: 768px) {
     .contact-promo-section {
         padding: 40px 10px;
@@ -571,14 +570,14 @@ background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30
 .Sucursales h1{
     color: #ff6f61;
 }
-/* Estilos generales del formulario */
+
 .formulario {
-    background-color: #ffffff; /* Fondo blanco para un aspecto limpio */
+    background-color: #ffffff; 
     padding: 2rem;
     border-radius: 10px;
     max-width: 600px;
-    margin: 2rem auto; /* Centrar el formulario en la página */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil para profundidad */
+    margin: 2rem auto; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
 /* Títulos del formulario */
@@ -590,7 +589,7 @@ background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30
     text-align: center;
 }
 
-/* Etiquetas y campos del formulario */
+
 .formulario label {
     display: block;
     font-weight: 600;
@@ -613,14 +612,14 @@ background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30
 .formulario input[type="text"]:focus,
 .formulario input[type="email"]:focus,
 .formulario textarea:focus {
-    border-color: #d97305; /* Color de borde en foco */
-    box-shadow: 0 0 8px rgba(217, 115, 5, 0.3); /* Sombra sutil en foco */
-    outline: none; /* Elimina el borde predeterminado del navegador */
+    border-color: #d97305; 
+    box-shadow: 0 0 8px rgba(217, 115, 5, 0.3); 
+    outline: none; 
 }
 
 /* Botón de envío */
 .formulario input[type="submit"] {
-    background-color: #d97305; /* Color de fondo del botón */
+    background-color: #d97305; 
     color: white;
     border: none;
     padding: 0.75rem 1.5rem;
@@ -631,11 +630,11 @@ background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30
 }
 
 .formulario input[type="submit"]:hover {
-    background-color: #e88c09; /* Color de fondo del botón al pasar el mouse */
-    transform: scale(1.05); /* Efecto de agrandamiento al pasar el mouse */
+    background-color: #e88c09; 
+    transform: scale(1.05);
 }
 
 .formulario input[type="submit"]:active {
-    background-color: #e07d0f; /* Color de fondo del botón al hacer clic */
-    transform: scale(1); /* Efecto de normalización al hacer clic */
+    background-color: #e07d0f; 
+    transform: scale(1); 
 }
