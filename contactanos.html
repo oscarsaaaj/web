@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="img/66bab3c7-0acf-4012-bb6d-06a45064e691.png">
+    <link rel="stylesheet" href="Estilos.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c3c8e79b20.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <title>Panadería la Sorpresa</title>
+    <style>    
+        .navbar-toggler {
+            background-color: #d97305;
+            border-color: #8B4513; 
+        }
+    </style>
+</head>
+<script>
+    $(document).ready(function() {
+        $('#formulario').submit(function(e) {
+            e.preventDefault(); 
+
+            Swal.fire({
+                title: '¿Estás seguro?',
+                text: '¿Deseas enviar esta información?',
+                icon: 'question',
+                showCancelButton: true,
+                confirmButtonText: 'Sí, enviar',
+                cancelButtonText: 'Cancelar'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    // Envía el formulario usando AJAX
+                    $.ajax({
+                        url: $(this).attr('action'),
+                        method: $(this).attr('method'),
+                        data: $(this).serialize(),
+                        success: function(response) {
+                            // Redirige a la página de agradecimiento
+                            window.location.href = 'gracias.html';
+                        },
+                        error: function() {
+                            Swal.fire('Error', 'Hubo un problema al enviar el formulario. Por favor, inténtalo de nuevo.', 'error');
+                        }
+                    });
+                }
+            });
+        });
+
+       
+    });
+</script>
+<body>
+    <nav class="navbar navbar-expand-md bg-white">
+        <div class="container-fluid">
+            <button class="navbar-toggler order-2 order-md-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse order-3 order-md-2" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="Index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Productos.html">Productos</a>
+                    </li>
+                </ul>
+            </div>
+            <a class="navbar-brand order-1 order-md-3" href="Index.html"><img src="img/66bab3c7-0acf-4012-bb6d-06a45064e691.png" alt="Logo Panaderia la Sorpresa"></a>
+            <div class="collapse navbar-collapse order-4 order-md-4" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="sucursales.html">Sucursales</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contactanos.html">Contactanos</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="formulario">
+        <h2>¡Queremos ser tu proveedor!</h2>
+        <h2>Déjanos tus datos y nos pondremos en contacto contigo para ofrecerte la mejor solución a tus necesidades.</h2>
+        <form id="formulario" action="https://formsubmit.co/oscarjdsv@gmail.com" method="POST">
+            <label for="name">Nombre</label>
+            <input type="text" name="name" id="name">
+
+            <label for="email">Correo Electrónico</label>
+            <input type="email" name="email" id="email">
+
+            <label for="numero">Teléfono</label>
+            <input type="text" name="telefono" id="telefono">
+
+            <label for="pedido">Comentarios</label>
+            <textarea name="problema" id="problema" cols="30" rows="5"></textarea>
+
+            <input class="btn btn-primary" type="submit" value="Enviar">
+            <input type="hidden" name="_next" value="Index.html"value="http://127.0.0.1:5500/">
+            <input type="hidden" name="_captcha" value="false">
+
+        
+        </form>
+    </div>
+    
+   
+    <footer class="pie-pagina">
+        <div class="grupo-1">
+            <div class="box">
+                <figure>
+                    <a href="#">
+                       <img src="img/66bab3c7-0acf-4012-bb6d-06a45064e691.png" alt="Logo de Panaderia la sorpresa">
+                    </a>
+                </figure>
+            </div>
+            <div class="box">
+                <h2>Sobre Nosotros</h2>
+                <p>Somos una panadería tradicional con más de 15 años de trayectoria, dando en nuestros panes la mejor calidad y servicio.</p>
+            </div>
+            <div class="box">
+                <h2>Siguenos!!!</h2>
+                <div class="red-sociales">
+                   <a href="https://www.facebook.com/share/Hh87uhiFKa8gdq7D/?mibextid=LQQJ4d" class="fa fa-facebook"></a> 
+                   <a href="https://www.instagram.com/lasorpresa.panaderia?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="fa fa-instagram"></a>
+                   <a href="https://api.whatsapp.com/send?phone=2211990702" class="fa fa-whatsapp"></a>
+                </div>
+            </div>
+        </div>
+        <div class="grupo-2">
+            <small>&copy; 2024 <b>Panaderia la sorpresa</b> - Todos los derechos reservados</small>
+        </div>
+    </footer>
+    
+   <script src="funciones.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
