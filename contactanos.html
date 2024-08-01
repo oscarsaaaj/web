@@ -17,42 +17,21 @@
             background-color: #d97305;
             border-color: #8B4513; 
         }
+        #loading {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 20px;
+            border-radius: 5px;
+            font-size: 1.5em;
+            z-index: 9999;
+            display: none; 
+        }
     </style>
 </head>
-<script>
-    $(document).ready(function() {
-        $('#formulario').submit(function(e) {
-            e.preventDefault(); 
-
-            Swal.fire({
-                title: '¿Estás seguro?',
-                text: '¿Deseas enviar esta información?',
-                icon: 'question',
-                showCancelButton: true,
-                confirmButtonText: 'Sí, enviar',
-                cancelButtonText: 'Cancelar'
-            }).then((result) => {
-                if (result.isConfirmed) {
-                    // Envía el formulario usando AJAX
-                    $.ajax({
-                        url: $(this).attr('action'),
-                        method: $(this).attr('method'),
-                        data: $(this).serialize(),
-                        success: function(response) {
-                            // Redirige a la página de agradecimiento
-                            window.location.href = 'gracias.html';
-                        },
-                        error: function() {
-                            Swal.fire('Error', 'Hubo un problema al enviar el formulario. Por favor, inténtalo de nuevo.', 'error');
-                        }
-                    });
-                }
-            });
-        });
-
-       
-    });
-</script>
 <body>
     <nav class="navbar navbar-expand-md bg-white">
         <div class="container-fluid">
@@ -101,12 +80,14 @@
             <input class="btn btn-primary" type="submit" value="Enviar">
             <input type="hidden" name="_next" value="Index.html"value="http://127.0.0.1:5500/">
             <input type="hidden" name="_captcha" value="false">
-
-        
         </form>
     </div>
     
-   
+    <!-- Elemento para mostrar la animación de carga -->
+    <div id="loading">
+        <i class="fa fa-spinner fa-spin"></i> Enviando...
+    </div>
+
     <footer class="pie-pagina">
         <div class="grupo-1">
             <div class="box">
@@ -134,7 +115,46 @@
         </div>
     </footer>
     
-   <script src="funciones.js"></script>
+    <script src="funciones.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function() {
+            $('#formulario').submit(function(e) {
+                e.preventDefault(); 
+
+                Swal.fire({
+                    title: '¿Estás seguro?',
+                    text: '¿Deseas enviar esta información?',
+                    icon: 'question',
+                    showCancelButton: true,
+                    confirmButtonText: 'Sí, enviar',
+                    cancelButtonText: 'Cancelar'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        
+                        $('#loading').show();
+
+                       
+                        $.ajax({
+                            url: $(this).attr('action'),
+                            method: $(this).attr('method'),
+                            data: $(this).serialize(),
+                            success: function(response) {
+                               
+                                $('#loading').hide();
+                                
+                                window.location.href = 'gracias.html';
+                            },
+                            error: function() {
+                            
+                                $('#loading').hide();
+                                Swal.fire('Error', 'Hubo un problema al enviar el formulario. Por favor, inténtalo de nuevo.', 'error');
+                            }
+                        });
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
