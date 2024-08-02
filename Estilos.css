@@ -638,3 +638,64 @@ background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30
     background-color: #e07d0f; 
     transform: scale(1); 
 }
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+.custom-button:hover,
+.promo-button:hover,
+.contact-promo-button:hover {
+    background-color: #d97305;
+    transform: scale(1.05);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.custom-image:hover,
+.promo-image:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #d97305;
+    transition: color 0.3s ease;
+}
+
+
+.container {
+    animation: fadeIn 1s ease-in-out;
+}
+
+
+
+.promo-section,
+.contact-promo-section {
+    animation: fadeIn 1s ease-in-out;
+}
+
+.promo-item,
+.contact-promo-button {
+    animation: fadeIn 1s ease-in-out;
+    animation-delay: 0.5s;
+    animation-fill-mode: both;
+}
