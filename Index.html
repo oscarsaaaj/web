@@ -10,8 +10,79 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/c3c8e79b20.js" crossorigin="anonymous"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver"></script>
+    <link rel="stylesheet" href="index.css">
 
     <title>Panadería La Sorpresa</title>
+    <style>
+        /* Animaciones de entrada */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-100%);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* Animaciones de hover */
+        .custom-button:hover,
+        .promo-button:hover,
+        .contact-promo-button:hover {
+            background-color: #d97305;
+            transform: scale(1.05);
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .custom-image:hover,
+        .promo-image:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: #d97305;
+            transition: color 0.3s ease;
+        }
+
+        /* Aplicación de animaciones */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .slide-in {
+            opacity: 0;
+            transform: translateX(-100%);
+            transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+        }
+
+        .slide-in.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    </style>
 </head>
 
 <body>
@@ -48,7 +119,7 @@
         </div>
     </nav>
 
-    <div class="container mt-5">
+    <div class="container mt-5 fade-in">
         <h1>Bienvenidos a Panadería La Sorpresa</h1>
         <p>
             En Panadería La Sorpresa, nos enorgullecemos de ofrecerte una experiencia culinaria única con cada bocado.
@@ -62,9 +133,8 @@
             recién horneados, pasteles artesanales y más, preparados con pasión y tradición. Ven y experimenta el
             verdadero sabor de la calidad. ¡Te esperamos!
         </p>
-
     </div>
-    <div class="main-container">
+    <div class="main-container fade-in">
         <div class="left-container">
             <h2 class="custom-heading">¡Descubre la Variedad de Nuestros Productos!</h2>
             <p class="custom-span">Deliciosos panes, pasteles frescos y mucho más, hechos con amor y los mejores
@@ -79,42 +149,41 @@
         </div>
     </div>
 
-    <div class="promo-section">
+    <div class="promo-section fade-in">
         <h2 class="promo-heading">SUCURSALES</h2>
         <p class="promo-text">
             Encuentra Nuestra Sucursal Más Cercana
-Estamos más cerca de lo que imaginas. Consulta nuestras sucursales y encuentra la más conveniente para ti. ¡Te esperamos con los brazos abiertos!
+            Estamos más cerca de lo que imaginas. Consulta nuestras sucursales y encuentra la más conveniente para ti. ¡Te esperamos con los brazos abiertos!
         </p>
         <div class="promo-images-container">
-            <div class="promo-item">
+            <div class="promo-item fade-in">
                 <img src="img/sucursal_loreto.jpg" alt="Pan 1" class="promo-image">
                 <h3 class="promo-item-heading">Sucursal Arboledas</h3>
                 <p class="promo-item-text">Visita nuestra Sucursal Arboledas, donde podrás disfrutar de nuestros panes recién horneados y un ambiente acogedor. ¡Ven y descubre nuestras especialidades diarias!</p>
             </div>
-            <div class="promo-item">
+            <div class="promo-item fade-in">
                 <img src="img/sucursalsanpedro.jpg" alt="Pan 2" class="promo-image">
                 <h3 class="promo-item-heading">Sucursal San Pedro</h3>
                 <p class="promo-item-text">En nuestra Sucursal San Pedro encontrarás una amplia variedad de panes y postres, todos elaborados con ingredientes de la mejor calidad. ¡Te esperamos para endulzar tu día!</p>
             </div>
-           
         </div>
         <a href="sucursales.html" class="promo-button">Ver Sucursales</a>
     </div>
-    
-    <div class="contact-promo-section">
+
+    <div class="contact-promo-section fade-in">
         <h2 class="contact-promo-heading">¡Haz Tu Pedido Ahora!</h2>
         <p class="contact-promo-text">
             ¡Estamos listos para recibir tu pedido! Completa nuestro formulario y disfruta de los mejores productos de nuestra panadería.
         </p>
         <a href="contactanos.html" class="contact-promo-button">Ir al Formulario de Pedido</a>
     </div>
-    
+
     <footer class="pie-pagina">
         <div class="grupo-1">
             <div class="box">
                 <figure>
                     <a href="#">
-                       <img src="img/66bab3c7-0acf-4012-bb6d-06a45064e691.png" alt="Logo de Panaderia la sorpresa">
+                        <img src="img/66bab3c7-0acf-4012-bb6d-06a45064e691.png" alt="Logo de Panaderia la sorpresa">
                     </a>
                 </figure>
             </div>
@@ -125,9 +194,9 @@ Estamos más cerca de lo que imaginas. Consulta nuestras sucursales y encuentra 
             <div class="box">
                 <h2>Siguenos!!!</h2>
                 <div class="red-sociales">
-                   <a href="https://www.facebook.com/share/Hh87uhiFKa8gdq7D/?mibextid=LQQJ4d" class="fa fa-facebook"></a> 
-                   <a href="https://www.instagram.com/lasorpresa.panaderia?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="fa fa-instagram"></a>
-                   <a href="https://api.whatsapp.com/send?phone=2211990702" class="fa fa-whatsapp"></a>
+                    <a href="https://www.facebook.com/share/Hh87uhiFKa8gdq7D/?mibextid=LQQJ4d" class="fa fa-facebook"></a>
+                    <a href="https://www.instagram.com/lasorpresa.panaderia?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="fa fa-instagram"></a>
+                    <a href="https://api.whatsapp.com/send?phone=2211990702" class="fa fa-whatsapp"></a>
                 </div>
             </div>
         </div>
@@ -135,12 +204,36 @@ Estamos más cerca de lo que imaginas. Consulta nuestras sucursales y encuentra 
             <small>&copy; 2024 <b>Panaderia la sorpresa</b> - Todos los derechos reservados</small>
         </div>
     </footer>
-    
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            
+            const elementsToAnimate = document.querySelectorAll('.fade-in, .slide-in');
+
+            elementsToAnimate.forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
 </body>
 
 </html>
