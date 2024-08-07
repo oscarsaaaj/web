@@ -82,6 +82,38 @@
             opacity: 1;
             transform: translateX(0);
         }
+        .history-section {
+            background-color: #f9f9f9; /* Color de fondo claro para destacar la sección */
+            padding: 2rem; /* Espaciado alrededor del contenido */
+            border-radius: 8px; /* Bordes redondeados */
+            margin: 2rem 0; /* Margen superior e inferior */
+            margin-bottom: 4rem; /* Añadir más espacio en la parte inferior */
+            animation: fadeIn 1s ease-in-out; /* Aplicar animación de entrada */
+            text-align: center; /* Centrar el texto */
+        }
+
+        .history-heading {
+            font-size: 2rem; /* Tamaño del título */
+            color: #d97305; /* Color del texto */
+            margin-bottom: 1rem; /* Espacio debajo del título */
+        }
+
+        .history-text {
+            font-size: 1rem; /* Tamaño del texto */
+            color: #333; /* Color del texto */
+            line-height: 1.6; /* Altura de línea para mejor legibilidad */
+            margin-bottom: 1rem; /* Espacio debajo de los párrafos */
+            text-align: justify; /* Justificar el texto */
+            max-width: 800px; /* Ancho máximo para mejorar la legibilidad */
+            margin-left: auto; /* Centrar la sección horizontalmente */
+            margin-right: auto; /* Centrar la sección horizontalmente */
+        }
+
+        @media (max-width: 768px) {
+            .history-text {
+                font-size: 0.9rem; /* Ajustar tamaño del texto en móviles */
+            }
+        }
     </style>
 </head>
 
@@ -134,6 +166,21 @@
             verdadero sabor de la calidad. ¡Te esperamos!
         </p>
     </div>
+
+    <!-- Nueva sección de historia -->
+    <div class="history-section fade-in">
+        <h2 class="history-heading">Nuestra Historia</h2>
+        <p class="history-text">
+            Panadería La Sorpresa, fundada hace 21 años por Gerardo Aguila y su esposa Margarita Salamanca, comenzó en la ciudad de Puebla como una empresa familiar en donde siempre la calidad y frescura nos identifican. Nuestros clientes han sido parte fundamental de este gran crecimiento y trayectoria.
+        </p>
+        <p class="history-text">
+            Nos apasiona la fabricación de pan, y saber que a cada familia le ofrecemos lo mejor de nuestro trabajo.
+        </p>
+        <p class="history-text">
+            Actualmente dirigida por su hijo Abraham Aguila, quien ha sido pieza fundamental para su crecimiento, Panadería La Sorpresa cuenta con dos sucursales y es distribuidora en varios puntos de venta, continuando con la tradición de más de 100 tipos de diferentes figuras. Toda la familia y nuestro equipo de trabajo trabajarán juntos para seguir creando, produciendo y llevando a sus hogares calidad, frescura y pasión en cada pieza de pan.
+        </p>
+    </div>
+
     <div class="main-container fade-in">
         <div class="left-container">
             <h2 class="custom-heading">¡Descubre la Variedad de Nuestros Productos!</h2>
@@ -189,7 +236,7 @@
             </div>
             <div class="box">
                 <h2>Sobre Nosotros</h2>
-                <p>Somos una panadería tradicional con más de 15 años de trayectoria, dando en nuestros panes la mejor calidad y servicio.</p>
+                <p>Somos una panadería tradicional con más de 21 años de trayectoria, dando en nuestros panes la mejor calidad y servicio.</p>
             </div>
             <div class="box">
                 <h2>Siguenos!!!</h2>
@@ -226,7 +273,7 @@
                 });
             }, observerOptions);
 
-            
+            // Selecciona los elementos que quieres animar
             const elementsToAnimate = document.querySelectorAll('.fade-in, .slide-in');
 
             elementsToAnimate.forEach(element => {
